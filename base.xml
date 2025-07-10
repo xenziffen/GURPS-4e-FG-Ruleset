@@ -14,7 +14,7 @@
 	<!-- Attributes -->
 	<description>
     <displayname>GURPS</displayname>
-    <displayversion>4th Edition</displayversion>
+    <displayversion>4th Edition +x</displayversion>
     <text>GURPS 4th edition ruleset.</text>
 		<author>Brian Ronnle (aka Ronnke)</author>
 		<website>http://www.sjgames.com/gurps/</website>
@@ -47,7 +47,7 @@
   <includefile source="campaign/record_char_resources.xml" />
   <includefile source="campaign/record_char_traits.xml" />
 	<includefile source="campaign/record_char_abilities.xml" />
-	<includefile source="campaign/record_char_combat.xml" />
+	<includefile source="campaign/record_ char_combat.xml" />
 	<includefile source="campaign/record_char_inventory.xml" />
 	<includefile source="campaign/record_char_notes.xml" />
 
