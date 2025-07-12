@@ -118,26 +118,26 @@ aVehicleTypeData = {
 
 -- Damage types
 aDamageTypeData = {
-	"aff",
-	"burn",
-	"cor",
-	"cr",
-	"cut",
-	"dbk",
-	"dbt",
-	"ex",
-	"exp",
-	"fat",
-	"frag",
-	"imp",
-	"inc",
-	"pi-",
-	"pi",
-	"pi+",
-	"pi++",
-	"rad",
-	"sur",
-	"tox"
+	"aff",  -- Affliction damage, typically causing status effects or conditions
+	"burn", -- Burn damage, resulting from fire or heat sources
+	"cor",  -- Corrosion damage, caused by acids or corrosive substances
+	"cr",   -- Crushing damage, from blunt force impacts
+	"cut",  -- Cutting damage, from slashing weapons or sharp objects
+	"dbk",  -- Double-back damage, a specific type of damage that may involve recoil or backlash
+	"dbt",  -- Double-tap damage, indicating a rapid succession of attacks
+	"ex",   -- Explosive damage, from blasts or detonations
+	"exp",  -- Expansion damage, often related to projectiles that expand upon impact
+	"fat",  -- Fatigue damage, which reduces stamina or energy levels
+	"frag", -- Fragmentation damage, from shrapnel or broken projectiles
+	"imp",  -- Impaling damage, from pointed weapons that penetrate deeply
+	"inc",  -- Incendiary damage, causing fire and burning effects
+	"pi-",  -- Penetrating injury (minus), indicating reduced effectiveness against armor
+	"pi",   -- Penetrating injury, normal effectiveness against armor
+	"pi+",  -- Penetrating injury (plus), indicating enhanced effectiveness against armor
+	"pi++", -- Penetrating injury (double plus), indicating superior effectiveness against armor
+	"rad",  -- Radiation damage, from radioactive sources
+	"sur",  -- Surprise damage, potentially from unexpected attacks
+	"tox"   -- Toxic damage, from poisons or harmful substances
 };
 
 -- Hit Locations 
