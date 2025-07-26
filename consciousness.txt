@@ -1,0 +1,129 @@
+-- vars
+-- currentHitPoints
+-- totalHitPoints
+if currentHitPoints == totalHitPoints then
+    status = "healthy"
+elseif currentHitPoints < totalHitPoints and currentHitPoints >= (0.66 * totalHitPoints) then
+    status = "Hurt"
+elelseif currentHitPoints < (0.66 * totalHitPoints) and currentHitPoints > (0.33 * totalHitPoints) then
+    status = "Injured"
+elelseif currentHitPoints <= (0.33 * totalHitPoints) and currentHitPoints > 0 then
+    status = "Wounded"
+    condition = "Staggered"
+end
+if condition == "Staggered" then
+    move, dodge = move * 0.5, dodge * 0.5
+end
+if currentHitPoints <= 0 and currentHitPoints >= (totalHitPoints * -1) then
+    status = "Critical"
+end
+if status == "Critical" then
+    requestPlayer("Roll HT to remain conscious")
+end
+if status == "Critical" and HTroll < HTstat then
+    condition = "Unconscious"
+end
+if condition == "Unconscious" then
+    status = "Prone"
+    helpless = true
+    move, dodge = 0, 0
+end
+if hit_points > -total_hp and hit_points <= -2 * total_hp then
+    condition = "Dying1"
+end
+
+if status == "Dying1" then
+    request_player("Roll HT to avoid death")
+end
+
+if HT_roll < HT_stat then
+    condition = "Dead"
+end
+
+if condition == "Dead" then
+    status = {"Dead", "Prone", "Helpless"}
+end
+
+if HT_roll > HT_stat then
+    request_player("Roll HT-1 to remain conscious")
+end
+
+if HT_roll < HT_minus_1_stat then
+    condition = "Unconscious"
+end
+
+if hit_points > -2 * total_hp and hit_points <= -3 * total_hp then
+    condition = "Dying2"
+end
+
+if status == "Dying2" then
+    request_player("Roll HT-1 to avoid death")
+end
+
+if HT_roll < HT_minus_1_stat then
+    condition = "Dead"
+end
+
+if condition == "Dead" then
+    status = {"Dead", "Prone", "Helpless"}
+end
+
+if HT_roll > HT_stat then
+    request_player("Roll HT-2 to remain conscious")
+end
+
+if HT_roll < HT_minus_2_stat then
+    condition = "Unconscious"
+end
+
+if hit_points > -3 * total_hp and hit_points <= -4 * total_hp then
+    condition = "Dying3"
+end
+
+if status == "Dying3" then
+    request_player("Roll HT to avoid death")
+end
+
+if HT_roll < HT_minus_2_stat then
+    condition = "Dead"
+end
+
+if condition == "Dead" then
+    status = {"Dead", "Prone", "Helpless"}
+end
+
+if HT_roll > HT_stat then
+    request_player("Roll HT-3 to remain conscious")
+end
+
+if HT_roll < HT_minus_3_stat then
+    condition = "Unconscious"
+end
+
+if hit_points > -4 * total_hp and hit_points < -5 * total_hp then
+    condition = "Dying4"
+end
+
+if status == "Dying4" then
+    request_player("Roll HT to avoid death")
+end
+
+if HT_roll < HT_minus_3_stat then
+    condition = "Dead"
+end
+
+if condition == "Dead" then
+    status = {"Dead", "Prone", "Helpless"}
+end
+
+if HT_roll > HT_stat then
+    request_player("Roll HT-4 to remain conscious")
+end
+
+if HT_roll < HT_minus_4_stat then
+    condition = "Unconscious"
+end
+
+if hit_points <= -5 * total_hp 
+    condition = "Dead"
+end

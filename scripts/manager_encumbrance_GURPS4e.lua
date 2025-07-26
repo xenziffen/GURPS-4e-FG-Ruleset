@@ -9,8 +9,12 @@ end
 
 function onTabletopInit()
 	if Session.IsHost then
+<<<<<<< HEAD
 		DB.addHandler("charsheet.*.attributes.basiclift", "onUpdate",
 			CharEncumbranceManagerGURPS4e.onBasicLiftChange);
+=======
+		DB.addHandler("charsheet.*.attributes.basiclift", "onUpdate", CharEncumbranceManagerGURPS4e.onBasicLiftChange);
+>>>>>>> 88ac0df4d0ef5ea8c1430987a569f8e74ad5b978
 		DB.addHandler("charsheet.*.attributes.halfmovedodge", "onUpdate",
 			CharEncumbranceManagerGURPS4e.onHalfMoveDodgeChange);
 
@@ -123,6 +127,7 @@ function updateEncumbranceLevel(nodeChar)
 	end
 end
 
+<<<<<<< HEAD
 function updateEncumbranceWeight(nodeChar)
 	if not DB.isOwner(nodeChar) then
 		return;
@@ -141,6 +146,8 @@ function updateEncumbranceWeight(nodeChar)
 	DB.setValue(nodeEnc, "enc4_weight", "string", nBasicLift * 10, 0);
 end
 
+=======
+>>>>>>> 88ac0df4d0ef5ea8c1430987a569f8e74ad5b978
 function updateDodgeField(nodeChar)
 	if not DB.isOwner(nodeChar) then
 		return;
@@ -151,5 +158,9 @@ function updateDodgeField(nodeChar)
 	DB.setValue(nodeEnc, "enc1_dodge", "number", math.max(nEncDodge - 1, 1));
 	DB.setValue(nodeEnc, "enc2_dodge", "number", math.max(nEncDodge - 2, 1));
 	DB.setValue(nodeEnc, "enc3_dodge", "number", math.max(nEncDodge - 3, 1));
+<<<<<<< HEAD
 	DB.setValue(nodeEnc, "enc4_dodge", "number", math.max(nEncDodge - 4, 1));
+=======
+	DB.setValue(nodeEnc, "enc4_dodge", "number", math.max(nEncDodge - 4, 1));	
+>>>>>>> 88ac0df4d0ef5ea8c1430987a569f8e74ad5b978
 end
